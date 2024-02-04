@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">`
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Todo List</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> 
+</head>
+
+<!-- this is for the body -->
+
+<!-- this is the card to give the body to the div -->
+<body class="container">
+    <br>
+    <div class="card">
+        <!-- this holds the bulk of the content -->
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <!-- used to style the elements-->
+                    <!-- this also makes the start date for the calender via bootstrap-->
+                    <div class=" form-group">
+                        <label for="new-start-date">Begin Date</label>
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <!-- used to style the elements-->
+                    <!-- this also makes the end date for the calender via bootstrap-->
+                    <div class=" form-group">
+                        <label for="new-end-date">Deadline Date</label>
+                        <input type="date" class="form-control" id="new-end-date">
+                    </div>
+                </div>        
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-task">Household Task</label>
+                        <input type="text" class="form-control" id="new-task" placeholder="Task">
+                    </div>
+                </div>
+            </div>
+            <div>        
+                <!-- used create the submit button using bootstrap-->
+                <button id="add" class="btn btn-primary from-control">Submit</button>
+            </div>
+        </div>    
+    </div>
+
+        <!-- USED An Id TO CREATE A TABLE-->
+
+    <table id="list" class="table table-dark table-striped"> 
+        <tr>
+            <th>Household Task</th>
+            <th>Date Created</th>
+            <th>Begin Date</th>
+            <th>Deadline Date</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+    
+<!-- link my js, bootstrap, and jquery-->
+
+    <script src="todo.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
